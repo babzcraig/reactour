@@ -21,16 +21,15 @@ function Arrow({ className, onClick, inverted, label, disabled }) {
 
   const hoverStyle = isHovered
     ? {
-        color: disabled ? '#caccce' : '#000',
+        color: disabled ? '#fff' : '#dedede',
       }
     : {}
 
   return (
     <SvgButton
       style={{
-        color: disabled ? '#caccce' : '#646464',
-        marginLeft: inverted ? '24px' : 'auto',
-        marginRight: inverted ? 'auto' : '24px',
+        color: '#fff',
+        opacity: disabled ? '0.3' : 1,
         ...labelStyles,
         ...hoverStyle,
       }}

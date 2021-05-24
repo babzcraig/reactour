@@ -40,6 +40,8 @@ function Tour({
   CustomHelper,
   showNumber,
   accentColor,
+  baseColor,
+  fontColor,
   highlightedMaskClassName,
   maskClassName,
   showButtons,
@@ -266,6 +268,8 @@ function Tour({
         })
       : steps[current].content)
 
+  const stepTitle = (steps[current] && steps[current].title) || ''
+
   return isOpen ? (
     <Portal>
       <SvgMask
@@ -309,6 +313,8 @@ function Tour({
           style={steps[current].style ? steps[current].style : {}}
           rounded={rounded}
           accentColor={accentColor}
+          baseColor={baseColor}
+          fontColor={fontColor}
           defaultStyles={!CustomHelper}
           className={cn(CN.helper.base, className, {
             [CN.helper.isOpen]: isOpen,
@@ -328,6 +334,7 @@ function Tour({
             </CustomHelper>
           ) : (
             <>
+              {stepTitle && <p className="reactour--step-title">{stepTitle}</p>}
               {children}
               {stepContent}
               {showNumber && (

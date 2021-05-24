@@ -28,7 +28,10 @@ function App() {
 
   const disableBody = target => disableBodyScroll(target)
   const enableBody = target => enableBodyScroll(target)
-  const accentColor = 'linear-gradient(to right, #1c8f9e, #5cb7b7)'
+  const accentColor = 'red'
+  const baseColor = '#4F645B'
+  const fontColor = '#fff'
+
   return (
     <>
       <div>
@@ -62,9 +65,13 @@ function App() {
           isOpen={isTourOpen}
           maskClassName="mask"
           className="helper"
-          rounded={5}
+          rounded={4}
           accentColor={accentColor}
+          baseColor={baseColor}
+          fontColor={fontColor}
           CustomHelper={customComps ? MyCustomHelper : null}
+          nextButton="NEXT"
+          showNumber={false}
         />
       </Suspense>
     </>
@@ -135,6 +142,7 @@ const newTourConfig = [
   },
   {
     selector: '.text',
+    title: "Welcome! Here's a title",
     content: 'And another step now',
   },
   {

@@ -10,6 +10,8 @@ export default React.forwardRef(function Guide({ children, ...props }, ref) {
     <div
       style={{
         '--reactour-accent': props.accentColor,
+        '--reactour-base': props.baseColor,
+        '--reactour-font': props.fontColor,
         transform: calcTransform(props),
         borderRadius: props.rounded,
       }}

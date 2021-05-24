@@ -1,16 +1,9 @@
-:root {
-   --reactour-base: #1b8ebf;
-}
-
 .Guide.default-styles {
-  max-width: 331px;
-  min-width: 150px;
-  padding-right: 40px;
-  /* border-radius: ${props.rounded}px; */
+  width: 300px;
   background-color: var(--reactour-base);
-  padding: 24px 30px;
+  padding: 32px 16px;
   box-shadow: 0 0.5em 3em rgba(0, 0, 0, 0.3);
-  color: inherit;
+  color: var(--reactour-font);
 }
 
 .Guide {
@@ -19,6 +12,17 @@
   top: 0;
   left: 0;
   z-index: 1000000;
+  /* TODO: this should be configured externally to prevent overriding user supplied children element styles */
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.reactour--step-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 180%;
+  margin: 0;
+  margin-bottom: 12px;
 }
 
 .Close:hover {
@@ -46,7 +50,7 @@
   display: flex;
   margin-top: 24px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .Arrow__label {
