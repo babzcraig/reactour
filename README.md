@@ -1,3 +1,9 @@
+<h3 align="center">
+  <strong>This package relies heavily on the work done by @elrumordelaluz and you should probably use that package</strong>
+</h3>
+<p align="center">
+  <strong>We just needed something that did not have a dependency on styled-components</strong>
+</p>
 <p align="center">
   <img alt="Reactour" title="Reactour" src="/logo.svg" width="250">
 </p>

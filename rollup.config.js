@@ -12,8 +12,7 @@ export default {
   ],
   plugins: [
     postcss({
-      extract: false,
-      modules: true,
+      extract: true,
     }),
     resolve(),
     babel({
