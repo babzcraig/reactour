@@ -4,7 +4,7 @@ import scrollSmooth from 'scroll-smooth'
 import Scrollparent from 'scrollparent'
 import debounce from 'lodash.debounce'
 import useMutationObserver from '@rooks/use-mutation-observer'
-import FocusLock from 'react-focus-lock'
+import FocusLock, { AutoFocusInside } from 'react-focus-lock'
 import Portal from './Portal'
 import {
   SvgMask,
@@ -381,28 +381,30 @@ function Tour({
                   )}
 
                   {showButtons && (
-                    <Arrow
-                      onClick={
-                        current === steps.length - 1
-                          ? lastStepNextButton
-                            ? close
-                            : () => {}
-                          : typeof nextStep === 'function'
-                          ? nextStep
-                          : this.nextStep
-                      }
-                      disabled={
-                        !lastStepNextButton && current === steps.length - 1
-                      }
-                      inverted
-                      label={
-                        lastStepNextButton && current === steps.length - 1
-                          ? lastStepNextButton
-                          : nextButton
-                          ? nextButton
-                          : null
-                      }
-                    />
+                    <AutoFocusInside>
+                      <Arrow
+                        onClick={
+                          current === steps.length - 1
+                            ? lastStepNextButton
+                              ? close
+                              : () => {}
+                            : typeof nextStep === 'function'
+                            ? nextStep
+                            : this.nextStep
+                        }
+                        disabled={
+                          !lastStepNextButton && current === steps.length - 1
+                        }
+                        inverted
+                        label={
+                          lastStepNextButton && current === steps.length - 1
+                            ? lastStepNextButton
+                            : nextButton
+                            ? nextButton
+                            : null
+                        }
+                      />
+                    </AutoFocusInside>
                   )}
                 </Controls>
               )}
