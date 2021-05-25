@@ -1,6 +1,6 @@
 {
   "name": "reactour-css-only",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "Tourist Guide into your React Components (With No Styled Components Dependency!)",
   "main": "dist/reactour.js",
   "module": "dist/reactour.esm.js",
@@ -11,7 +11,9 @@
     "lib": "rollup -c",
     "build": "webpack --mode production",
     "lint": "eslint --fix ./; exit 0",
-    "dev": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "release": "npm run prelib && npm publish",
+    "release:docs": "npm build"
   },
   "repository": {
     "type": "git",
