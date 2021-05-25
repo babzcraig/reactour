@@ -73,6 +73,7 @@ function App() {
           nextButton="NEXT"
           showNumber={false}
           overlayOpacity={0.7}
+          lastStepNextButton="DONE"
         />
       </Suspense>
     </>
