@@ -12,6 +12,7 @@ export default function Dot({ children, className, ...props }) {
     <button
       style={{
         transform: `scale(${props.current === props.index ? 1.25 : 1})`,
+        color: '#fff',
       }}
       className={
         'Dot ' + cursorStyle + selectedStyle + displayStyleClass + className

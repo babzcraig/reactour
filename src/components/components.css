@@ -105,7 +105,7 @@
 }
 
 .Dot:hover {
-  background-color: currentColor;
+  background-color: #dedede;
  }
 
  .Dot:hover::before {
