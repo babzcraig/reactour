@@ -72,6 +72,7 @@ function App() {
           CustomHelper={customComps ? MyCustomHelper : null}
           nextButton="NEXT"
           showNumber={false}
+          overlayOpacity={0.7}
         />
       </Suspense>
     </>

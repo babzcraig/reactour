@@ -62,6 +62,7 @@ export const propTypes = {
   ]),
   rounded: PropTypes.number,
   accentColor: PropTypes.string,
+  overlayOpacity: PropTypes.number,
 }
 
 export const defaultProps = {

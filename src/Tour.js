@@ -52,6 +52,7 @@ function Tour({
   lastStepNextButton,
   nextButton,
   rounded,
+  overlayOpacity,
   maskSpace,
   showCloseButton,
   accessibilityOptions,
@@ -274,6 +275,7 @@ function Tour({
     <Portal>
       <SvgMask
         onClick={maskClickHandler}
+        overlayOpacity={overlayOpacity}
         windowWidth={state.w}
         windowHeight={state.h}
         targetWidth={state.width}

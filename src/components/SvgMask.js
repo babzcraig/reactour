@@ -15,6 +15,7 @@ export default function SvgMask({
   disableInteractionClassName,
   className,
   onClick,
+  overlayOpacity = 0.2,
 }) {
   const width = hx.safe(targetWidth + padding * 2)
   const height = hx.safe(targetHeight + padding * 2)
@@ -24,7 +25,7 @@ export default function SvgMask({
   return (
     <div
       style={{
-        opacity: 0.7,
+        opacity: overlayOpacity,
         width: '100%',
         left: 0,
         top: 0,
@@ -173,4 +174,5 @@ SvgMask.propTypes = {
   rounded: PropTypes.number.isRequired,
   disableInteraction: PropTypes.bool.isRequired,
   disableInteractionClassName: PropTypes.string.isRequired,
+  overlayOpacity: PropTypes.string.isRequired,
 }
