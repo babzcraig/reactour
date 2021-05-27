@@ -1,7 +1,7 @@
 .Guide.default-styles {
   width: 300px;
   background-color: var(--reactour-base);
-  padding: 56px 16px 36px;
+  padding: 24px 16px 36px;
   box-shadow: 0 0.5em 3em rgba(0, 0, 0, 0.3);
   color: var(--reactour-font);
 }

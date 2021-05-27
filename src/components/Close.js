@@ -8,7 +8,7 @@ function Close({ className, color, onClick, ariaLabel }) {
     <SvgButton
       style={{
         position: 'absolute',
-        top: '16px',
+        top: '24px',
         right: '16px',
         width: '24px',
         height: '24px',
